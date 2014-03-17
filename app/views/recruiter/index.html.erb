@@ -1,0 +1,17 @@
+<div>
+  <h1> Job Opportunities</h1>
+</div>
+
+<% @job_list.each do |job| %>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="/recruiter/<%= job.id %>/index"><img width="100" src="<%= job.logo_url %>"></a>
+    </div>
+    <div class="col-md-9">
+      <h3><a href="/recruiter/<%= job.id %>/index"><%= job.company %></a></h3>
+      <p><%= job.role %></p>
+      <p><%= job.description %></p>
+
+    </div>
+  </div>
+<% end %>

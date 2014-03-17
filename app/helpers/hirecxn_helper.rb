@@ -1,0 +1,2 @@
+module HirecxnHelper
+end

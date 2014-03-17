@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to "Create a New Profile", "/candidate/new", :class => "btn btn-md btn-success pull-right" %>
+</div>
+
+<% @candidate_list.each do |candidate| %>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="/candidate/<%= candidate.id %>/show"><img width="150" src="<%= candidate.photo_url %>"></a>
+    </div>
+    <div class="col-md-9">
+      <h3><a href="/candidate/<%= candidate.id %>/show"><%= candidate.name %></a></h3>
+      <p><%= candidate.company %></p>
+      <p><%= candidate.role %></p>
+      <p><%= candidate.city %></p>
+
+      <p class="pull-right">
+      <%= link_to "Edit", "/candidate/#{candidate.id}/edit" %> |
+      <%= link_to "Delete", "/candidate/#{candidate.id}/destroy" %>
+      </p>
+
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+
+<div class="page-header">
+  <%= link_to "Edit", "/candidate/#{@candidate.id}/edit", :class => "btn btn-md btn-success pull-right" %>
+  <h1>Candidate Details</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img class="col-md-12" src="<%= @candidate.photo_url %>">
+  </div>
+  <div class="col-md-8">
+    <h3><%= @candidate.name %></h3>
+    <p><%= @candidate.role %></p>
+  </div>
+</div>
